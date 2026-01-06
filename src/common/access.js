@@ -30,7 +30,7 @@ const guardAccess = ({ res, id, type, colors }) => {
     type === "gist"
       ? NOT_WHITELISTED_GIST_MESSAGE
       : NOT_WHITELISTED_USERNAME_MESSAGE;
-
+console.log(currentWhitelist, res, id, type, colors)
   if (Array.isArray(currentWhitelist) && !currentWhitelist.includes(id)) {
     const result = res.send(
       renderError({
